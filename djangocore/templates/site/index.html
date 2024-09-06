@@ -32,7 +32,7 @@
         <div class="container" id="nav-container">
             <nav class="navbar navbar-expand-lg">
                 <a href="#" class="navbar-brand" style="font-size: 25px;">
-                    <img id="logo" src="icones/guia-ifg.svg" alt=""><div id="guia-top">Guia de Cursos <strong>IFG</strong></div>
+                    <img id="logo" src="{% static 'site/icones/guia-ifg.svg' %} " alt=""><div id="guia-top">Guia de Cursos <strong>IFG</strong></div>
                 </a>
                 <!--Para Mobile-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,7 +119,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="overlay">
-                            <img src="img/_MG_4235.jpg" class="d-block w-100" alt="">
+                            <img src="{% static 'site/img/_MG_4235.jpg' %} " class="d-block w-100" alt="">
                             <div class="carousel-caption">
                                 Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
                                 desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
@@ -130,7 +130,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="overlay">
-                            <img src="img/ifg inhumas jif.jpeg" class="d-block w-100" alt="">
+                            <img src="{% static 'site/img/ifg inhumas jif.jpeg' %}" class="d-block w-100" alt="">
                             <div class="carousel-caption">
                                 Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
                                 desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
@@ -335,10 +335,11 @@
                 <ol class="lista-links-uteis">
                     <li>
                         <div class="p-2" style="position: relative;">
-                            <img src="img/_MG_8212-2.jpg" id="img-circ" class="img-links-uteis" alt="Imagem 1">
+                            <img src="{% static 'site/img/_MG_8212-2.jpg' %}" id="img-circ" class="img-links-uteis" alt="Imagem 1">
                         </div>
                         <div class="p-2">
-                            <img src="icones/play-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+
+                            <img src="{% static 'site/icones/play-branco.svg' %}" class="img-fluid icones-links-uteis" alt="Ícone">
                         </div>
                     </li>
                     <li class="texto-links-uteis">
@@ -348,10 +349,10 @@
                 <ol class="lista-links-uteis">
                     <li>
                         <div class="p-2">
-                            <img src="img/_MG_0396.jpg" class="img-links-uteis" alt="Imagem 2">
+                            <img src="{% static 'site/img/_MG_0396.jpg' %}" class="img-links-uteis" alt="Imagem 2">
                         </div>
                         <div class="p-2">
-                            <img src="icones/capelo-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+                            <img src="{% static 'site/icones/capelo-branco.svg' %}" class="img-fluid icones-links-uteis" alt="Ícone">
                         </div>
                     </li>
                     <li class="texto-links-uteis">
@@ -361,10 +362,10 @@
                 <ol class="lista-links-uteis">
                     <li>
                         <div class="p-2">
-                            <img src="img/360_F_227729582_tbDocS9RLEiTkzpwOdPf1qKXiW4MQC89.jpeg" class="img-links-uteis" alt="Imagem 3">
+                            <img src="{% static 'site/img/360_F_227729582_tbDocS9RLEiTkzpwOdPf1qKXiW4MQC89.jpeg' %}" class="img-links-uteis" alt="Imagem 3">
                         </div>
                         <div class="p-2">
-                            <img src="icones/pergunta-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+                            <img src="{% static 'site/icones/pergunta-branco.svg' %}" class="img-fluid icones-links-uteis" alt="Ícone">
                         </div>
                     </li>
                     <li class="texto-links-uteis">
@@ -392,7 +393,9 @@
                         ...<br>
                         <div id="contato-div1" class="contato-div">Diretório<br><span class="contato-cor"><strong>TODOS OS CONTATOS</strong></span></div>
                         <div id="contato-fone" class="contato-div">
-                            <div><img src="icones/fone-verde.svg"></div>
+                            <div><img src=" {% static 'site/icones/fone-verde.svg' %}"></div>
+
+
                             <div>Reitoria IFG<br><strong>(062) 0000-0000</strong></div>
                         </div>
                     </div>
@@ -408,7 +411,7 @@
                 Inscreva-se na Lista de Trasmissão do Guia de Cursos IFG
                 <div id="whats-bot" class="d-flex justify-content-between align-items-center">
                     <div class="text-center w-100">Cadastre seu whatsapp aqui</div>
-                    <div class=""><img src="icones/ok.svg"></div>
+                    <div class=""><img src="{% static 'site/icones/ok.svg' %} "></div>
                 </div>
             </div>
             <!--voltar inicio-->
@@ -423,11 +426,11 @@
     <div class="container-fluid">
         <div id="rodape">
             <div id="rodape-cima">
-                <div><img src="icones/guia-ifg.svg"></div>
+                <div><img src="{% static 'site/icones/guia-ifg.svg' %} "></div>
                 <div id="rodape-texto1">Guia de Cursos <strong>IFG</strong></div>
             </div>
             <div id="rodape-baixo">
-                <div><a href="http://www.ifg.edu.br/"><img id="rodape-logo" src="icones/ifg.svg"></a></div>
+                <div><a href="http://www.ifg.edu.br/"><img id="rodape-logo" src="{% static 'site/icones/ifg.svg' %} "></a></div>
                 <div id="rodape-texto2"><strong>INSTITUTO FEDERAL</strong><br>Goiás</div>
             </div>
         </div>
