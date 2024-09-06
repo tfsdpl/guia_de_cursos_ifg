@@ -256,15 +256,14 @@
                 <!-- Bloco 1 -->
                 <div id="campus-div" class="col-12 col-md-6 col-lg-3 mb-3 order-2 order-lg-1">
                     
-                     {% if all_natops%}
+
                     {% for natop in all_natops %}
                         <ol id="">
-                            <a class="link-campus" href="campus/aguas-lindas.html"><li class="campus-li" id="aguaslindas-item">{{ natop.nome_campus }}</li></a>
+                            <a class="link-campus" href="campus/aguas-lindas.html"><li class="campus-li" id="{{ natop.nome_campus }}-item">{{ natop.nome_campus }}</li></a>
                         </ol>
                        
                     {% endfor %}
-                    {%else%}
-              {%endif%}
+
                     
                 </div>
                 <!-- Bloco 2 -->
@@ -273,62 +272,18 @@
                 <div id="campus-div-mapa" class="col-12 col-md-6 col-lg-3 mb-3 order-1 order-lg-4">
                     <div class="map-container">
                         <img src="{% static 'site/icones/mapa.svg' %}" class="img-fluid" id="mapa" alt="Mapa">
-                        <div class="pointer" style="top: 68%; left: 20%;">
-                            <img class="point-img" id="jatai" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-jatai">Jataí</div>
-                        </div> 
-                        <div class="pointer" style="top: 76%; left: 56%;">
-                            <img class="point-img" id="itumbiara" src="{% static 'site/icones/pointer-green.svg' %}" alt="Pointer">
-                            <div class="leg" id="leg-itumbiara">Itumbiara</div>
-                        </div> 
-                        <div class="pointer" style="top: 40%; left: 45%;">
-                            <img class="point-img" id="cidadegoias" src="{% static 'site/icones/pointer-green.svg' %}" alt="Pointer">
-                            <div class="leg" id="leg-cidadegoias">Cidade de Goiás</div>
-                        </div> 
-                        <div class="pointer" style="top: 65%; left: 59%;">
-                            <img class="point-img" id="aparecida" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-aparecida">Aparecida de Goiás</div>
-                        </div> 
-                        <div class="pointer" style="top: 60%; left: 59%;">
-                            <img class="point-img" id="goiania" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-goiania">Goiânia</div>
-                        </div>
-                        <div class="pointer" style="top: 62%; left: 55%;">
-                            <img class="point-img" id="goianiaoeste" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-goianiaoeste">Goiânia Oeste</div>
-                        </div>
-                        <div class="pointer" style="top: 55%; left: 55%;">
-                            <img class="point-img" id="inhumas" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-inhumas">Inhumas</div>
-                        </div>
-                        <div class="pointer" style="top: 55%; left: 63%;">
-                            <img class="point-img" id="anapolis" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-anapolis">Anápolis</div>
-                        </div>
-                        <div class="pointer" style="top: 61%; left: 64%;">
-                            <img class="point-img" id="canedo" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-canedo">Senador Canedo</div>
-                        </div> 
-                        <div class="pointer" style="top: 22%; left: 60%;">
-                            <img class="point-img" id="uruaçu" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-uruaçu">Uruaçu</div>
-                        </div> 
-                        <div class="pointer" style="top: 38%; left: 71%;">
-                            <img class="point-img" id="aguaslindas" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-aguaslindas">Águas Lindas</div>
-                        </div>
-                        <div class="pointer" style="top: 42%; left: 75%;">
-                            <img class="point-img" id="valparaiso" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-valparaiso">Valparaíso</div>
-                        </div>
-                        <div class="pointer" style="top: 48%; left: 76%;">
-                            <img class="point-img" id="luziania" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-luziania">Luziânia</div>
-                        </div>
-                        <div class="pointer" style="top: 34%; left: 79%;">
-                            <img class="point-img" id="formosa" src="icones/pointer-green.svg" alt="Pointer">
-                            <div class="leg" id="leg-formosa">Formosa</div>
-                        </div>        
+
+
+                        {% for natop in all_natops %}
+                            <div class="pointer" style="top: 76%; left: 56%;">
+                                <img class="point-img" id="{{ natop.nome_campus }}" src="{% static 'site/icones/pointer-green.svg' %}" alt="Pointer">
+                                <div class="leg" id="leg-{{ natop.nome_campus }}">{{ natop.nome_campus }}</div>
+                            </div>
+                        {% endfor %}
+
+
+
+
                     </div>
                 </div>
             </div>
