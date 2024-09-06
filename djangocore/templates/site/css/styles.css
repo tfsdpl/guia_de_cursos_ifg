@@ -1,0 +1,724 @@
+/* Esconde o botão em telas maiores */
+.navbar-toggler {
+    display:none;
+}
+
+/* Mostra o botão em telas menores (dispositivos móveis) */
+@media (max-width: 990px) {
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/*Geral*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+    margin:0;
+}
+
+/*Barra navegação*/
+header { 
+    position:fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+#nav-container {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /*sombra borda*/
+}
+
+.collapse {
+    padding-right: 20px;
+}
+
+.navbar-brand {
+    padding: 0px 0px 0px 20px;  
+}
+
+.navbar-nav {
+    background-color: #2f9e41;
+    -webkit-text-fill-color:#FFFFFF;
+    padding: 10px 10px 10px 30px;
+    border-radius: 10px; 
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    padding: 8px 0px 5px 10px;
+}
+
+#guia-top {
+    padding: 0px 0px 0px 20px;
+    float:right;
+    font-size: 30px;
+}
+
+#busque-curso-menu {
+    padding: 0px 10px 0px 15px;
+}
+
+#busque-curso-menu:hover {
+    text-decoration:underline;
+}
+
+.busque-icon{
+    fill:#FFFFFF;
+}
+
+/*menu suspenso*/
+
+.dropdown {
+    position:relative;
+    z-index: 2;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #237731ff;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    font-size: 15px;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu a:active {
+    background-color: #1a5925ff; /* Manter o fundo verde escuro */
+    text-decoration: underline;
+    color: #fff; /* Manter a fonte branca */
+}
+
+.dropdown-menu a:focus,
+.dropdown-menu a:active {
+    background-color: #237731ff; /* Fundo normal do menu */
+    color: #fff; /* Fonte branca */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/*Fim menu suspenso*/
+
+#sobre-menu {
+    padding: 0px 10px 0px 20px;
+}
+#sobre-menu:hover {
+    padding: 0px 10px 0px 20px;
+    text-decoration: underline;
+}
+#contato-menu {
+    padding: 0px 10px 0px 20px;
+}
+#contato-menu:hover {
+    text-decoration: underline;
+}
+#pesquisar-menu {
+    padding: 0px 10px 0px 10px;
+    opacity: 50%;
+    background-color: #237731;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#pesquisar-menu:hover {
+    opacity: 100%;
+}
+.pesquisar-icon {
+    fill:#FFFFFF;
+    opacity: 50%;
+    transition: all 0.3s ease;
+}
+.pesquisar-icon:hover {
+    opacity: 100%;
+}
+#pesquisar-container {
+    display:flex;
+    align-items: center;
+   
+}
+#pesquisar-input {
+    width: 100px; /* Define a largura do campo de pesquisa */
+    height: 19px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 5px;
+    display: none;
+    -webkit-text-fill-color:white;
+    background-color: #237731;
+}
+#cnt-pesq { 
+    padding: 2px 0px 0px 10px;
+    float: right;
+}
+
+.nav-item {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+/*area do slider*/
+
+.carousel-caption {
+    position: absolute;
+    top: 15%; /* Ajuste esse valor para mover a legenda para cima ou para baixo */
+    left: 25%;
+    right: 55%;
+    bottom: 30%;
+    transform: translateX(-30%);
+    background-color: #FFFFFF;
+    color: #afafaf;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.carousel-item img {
+    height: 800px; /* Defina a altura desejada */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner mantendo a proporção */
+    width: 100%;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    pointer-events: none; /* Garante que a camada não interfira na interatividade */
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Ajuste a distância da parte inferior conforme necessário */
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os indicadores */
+}
+
+.carousel-indicators li {
+    width: 8px; /* Tamanho das bolinhas */
+    height: 8px; /* Tamanho das bolinhas */
+    border-radius: 50%; /* Torna os indicadores circulares */
+    background-color: rgba(90, 88, 88, 0.5); /* Cor das bolinhas */
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar sobre a bolinha */
+    list-style: none;
+}
+
+.carousel-indicators .active {
+    background-color: #fff; /* Cor da bolinha ativa */
+}
+
+/*area clique para o final*/
+
+.fim-icon {
+    fill:#afafaf;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+}
+
+#go-fim {
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+}
+
+/*area busque seu curso*/
+
+#busque-seu-curso{
+    padding: 80px 0px 80px 0px;
+    text-align: center;
+    background-color: #f2f2f2;
+    font-size: 30px;
+    color: #8f8d8d;
+    height: auto;
+}
+
+#bsc-div {
+    width: 22%;
+    margin: 0 auto; /* Centraliza o contêiner da lista */
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+
+
+#bsc-lista {
+    padding-left: 0; /* Remove o padding padrão da lista ordenada */
+    margin: 0;
+    list-style: none; /* Remove os números padrão */
+    text-align: center; /* Centraliza o conteúdo da lista */
+}
+
+.bsc {
+    text-decoration: none;
+    background-color: #fff;
+    list-style: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 9px;
+    color: #8f8d8d;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.bsc:hover {
+    text-decoration: none;
+    background-color: #237731;
+    list-style: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 9px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.15);
+}
+
+/*area modalidades*/
+#modalidades{
+    padding: 80px 0px 80px 0px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 30px;
+    color: #8f8d8d;
+    height: auto;
+}
+
+.modalidade-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+.modalidade-carousel-inner {/**/
+    display: flex;
+    width: 100%;
+    margin-left: 75px;
+}
+
+.modalidade-row {
+    display: flex;
+    width: calc(100% + 40px); /* Ajuste a largura para permitir que imagens laterais sejam visíveis */
+}
+
+.modalidade-col {
+    flex: 0 0 auto; /* Impede que as colunas se estiquem ou encolham */
+    width: 25%; /* Ajuste para mostrar 4 imagens visíveis de uma vez (100% dividido por 4) */
+    padding: 0 10px; /* Espaçamento entre as imagens */
+}
+
+.modalidade-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.modalidade-control-prev,
+.modalidade-control-next {
+    width: 5%;
+    opacity:0.2;
+}
+
+.modalidade-control-prev:hover,
+.modalidade-control-next:hover {
+    opacity: 0.4; 
+}
+
+.modalidade-prev-icon,
+.modalidade-next-icon {
+    background-color: #b9b9b9;
+    border-radius: 50%;
+}
+
+.modalidade-back {
+    width: 150px; 
+    height: 200px; 
+    background-color: #f2f2f2; 
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 20px;
+}
+
+.lista-mod {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.pad-mod {
+    padding-bottom: 18px;
+}
+
+/*campus*/
+
+#campus{
+    padding: 80px 0px 80px 0px;
+    text-align: center;
+    background-color: #f2f2f2;
+    font-size: 30px;
+    color: #8f8d8d;
+    height: auto;
+}
+
+#campus-div {
+    width: 250px;
+    height: auto;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-right: -20px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 100%;
+    display:grid;/**/
+}
+
+#campus-div-mapa {
+    width: 500px;
+    height: auto;
+    display:grid;
+}
+
+#campus-row {
+    padding-right: 100px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.campus-li{
+    text-decoration: none;
+    background-color: #fff;
+    list-style: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 9px;
+    color: #8f8d8d;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.campus-li:hover {
+    text-decoration: none;
+    background-color: #237731;
+    list-style: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 9px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.15);
+}
+
+.link-campus {
+    text-decoration: none;
+}
+
+.img-fluid {
+    width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .img-fluid {
+      min-width: 90%; /* Ajusta a largura máxima para telas menores */
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .img-fluid {
+      min-width: 90%; /* Ajusta a largura máxima para telas muito pequenas */
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container {
+    position: relative; /* Necessário para posicionar os ícones sobre a imagem */
+    padding-left: 40px; 
+}
+
+.pointer {
+    position: absolute;
+    width: 10px; 
+    height: auto; /* Mantém a proporção do ícone */
+    /*transform: translate(-50%, -100%); /* Centraliza o ícone no ponto especificado */
+    object-fit: contain;
+    max-width: 10%;
+}
+
+.point-img {
+    height: 25px;
+    width: auto;
+}
+
+.point-img.hovered {
+    transform: scale(1.4); /* Aumenta o tamanho do ícone */
+}
+
+.leg {
+    display: none; /* Inicialmente, a legenda está oculta */
+    position: absolute;
+    background-color: #fff;
+    color: #8f8d8d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 11; 
+}
+
+.pointer.hovered .leg {
+    display: block; /* A legenda aparece quando o pointer está no estado hovered */
+}
+
+/*Sobre o IFG*/
+#sobre-ifg {
+    padding: 80px 0px 50px 0px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 30px;
+    color: #8f8d8d; 
+}
+
+#quadro-sobre {
+    background-color: #f2f2f2ff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    font-size: large;
+    height: auto;
+    width: 450px;
+
+}
+
+#quadro-video {
+    padding-top: 50px;
+    height: auto;
+}
+
+#sobre-baixo {
+    height: auto;
+}
+
+#link-video{
+    height: 100%; 
+    width: 100%;
+    border-radius: 15px;
+}
+
+.video-container {
+    height: 90%;
+}
+
+/*Links Úteis*/
+
+#links-uteis {
+    padding: 80px 0px 50px 0px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 30px;
+    color: #8f8d8d;   
+}
+
+.img-links-uteis {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    object-fit: cover; /*manter proporção*/
+    filter: brightness(50%);
+}
+
+#img-circ {
+    border-radius: 50%;
+}
+
+.icones-links-uteis {
+    position: absolute;
+    transform: translate(70%,-180%); /* Centraliza o ícone */
+    width: 150px; /* Ajuste conforme necessário */
+    height: 150px; /* Ajuste conforme necessário */
+}
+
+.lista-links-uteis {
+    list-style: none;
+}
+
+.texto-links-uteis {
+    text-align: center;
+    font-size: 25px;
+    color: #8f8d8d;
+}
+
+/*Contato*/
+
+#contato {
+    padding: 80px 0px 50px 0px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #8f8d8d;
+    height: 700px; 
+}
+
+#contato-map {
+    height: 550px;
+}
+
+#contato-esquerda{
+    height: auto;
+    width: 600px;
+}
+
+#contato-direita{
+    background-color: #fff;
+    color: #8f8d8d;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    font-size: large;
+    height: auto;
+    width: 26%;
+    line-height: 3.0;
+}
+
+#localizacao {
+    height: 100%; 
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.contato-div {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding-left: 15px;
+    line-height: 1.5;
+    margin-top: 20px;
+    height: 100px;
+    display:grid;
+    align-items: center;
+}
+
+#contato-div1 {
+    padding: 15px 0px 15px 15px;
+}
+
+#contato-fone {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
+}
+
+#contato-fone img {
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    padding-right: 15px;
+}
+
+.contato-cor {
+    color: #53935eff;
+    font-size: larger;
+}
+
+/*whats*/
+
+.whats-container {
+    padding: 100px 100px 80px 100px;
+    text-align: center;
+}
+
+#whats-top {
+    padding: 40px 0px 40px 0px;
+    background-color:#237731ff;
+    color: #fff;
+    border-radius: 13px; 
+    font-size: larger;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#whats-bot {
+    margin: 20px 150px 20px 150px;
+    background-color: #184f21ff;
+    border-radius: 13px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);   
+}
+
+#whats-voltar{
+    padding-top: 50px;
+    color:#8f8d8d;
+    font-size: x-large;
+    line-height: 0.5;
+}
+
+#inicio {
+    text-decoration: none;
+    color:#8f8d8d;
+}
+
+/*rodape*/
+
+#rodape {
+    background-color:#f2f2f2;
+    padding-top: 60px;
+    padding-left: 150px;
+    padding-bottom: 60px;
+    font-size: 30px;
+}
+
+#rodape-cima {
+    padding-bottom: 100px;
+    display: flex;
+}
+
+#rodape-baixo {
+    display: flex;
+    line-height: 0.9;
+}
+
+#rodape-texto1 {
+    padding-left: 25px;
+}
+
+#rodape-texto2 {
+    padding-top: 60px;
+    padding-left: 25px;
+}
+
+#rodape-logo {
+    width: 85px;
+}

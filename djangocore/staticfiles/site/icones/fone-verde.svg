@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11.87164mm"
+   height="11.338043mm"
+   viewBox="0 0 11.87164 11.338043"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="fone-verde.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.9576319"
+     inkscape:cx="26.710559"
+     inkscape:cy="39.558676"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-90.382326,-184.96812)">
+    <ellipse
+       style="fill:#237731;fill-opacity:1;stroke-width:0.264583"
+       id="path2090"
+       cx="96.318146"
+       cy="190.63715"
+       rx="5.9358201"
+       ry="5.6690216" />
+    <path
+       d="m 98.466962,193.0762 q -0.856878,0 -1.703228,-0.43018 -0.846345,-0.43018 -1.520613,-1.11846 -0.674268,-0.68829 -1.095686,-1.55223 -0.421418,-0.86394 -0.421418,-1.73864 0,-0.13827 0.0903,-0.23045 0.0903,-0.0922 0.225763,-0.0922 h 0.983306 q 0.0956,0 0.170718,0.0681 0.07511,0.0681 0.09618,0.18283 l 0.189639,0.90337 q 0.01407,0.10038 -0.0037,0.18283 -0.01757,0.0824 -0.07374,0.13981 l -0.702365,0.72413 q 0.393322,0.66678 0.881466,1.16148 0.488144,0.4947 1.106219,0.83885 l 0.66725,-0.70262 q 0.07023,-0.0789 0.161543,-0.11114 0.09131,-0.0322 0.18261,-0.0107 l 0.835811,0.18641 q 0.107548,0.0242 0.17669,0.10889 0.06914,0.0847 0.06914,0.19941 v 0.9679 q 0,0.13827 -0.0903,0.23045 -0.09031,0.0922 -0.225764,0.0922 z m -3.975369,-3.35539 0.568913,-0.58791 -0.161543,-0.78866 h -0.751528 q 0,0.27962 0.08428,0.61301 0.08428,0.33338 0.259875,0.76356 z m 3.870019,2.92521 v -0.76715 l -0.723437,-0.15056 -0.554864,0.59508 q 0.287966,0.13622 0.6251,0.22225 0.337134,0.086 0.653201,0.10038 z m -1.278301,-0.32263 z m -2.591718,-2.60258 z"
+       id="path2296"
+       style="fill:#ffffff;stroke-width:0.00709628" />
+  </g>
+</svg>

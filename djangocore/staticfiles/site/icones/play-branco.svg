@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.58333mm"
+   height="10.58334mm"
+   viewBox="0 0 10.58333 10.58334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="play-branco.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="4.1827231"
+     inkscape:cx="40.4043"
+     inkscape:cy="20.082611"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-101.6999,750.65432)">
+    <path
+       d="m 106.17136,-743.40473 2.67229,-1.70657 q 0.14552,-0.0926 0.14552,-0.25135 0,-0.15875 -0.14552,-0.25135 l -2.67229,-1.70657 q -0.14552,-0.10583 -0.30427,-0.0198 -0.15875,0.086 -0.15875,0.2712 v 3.41312 q 0,0.18521 0.15875,0.2712 0.15875,0.086 0.30427,-0.0198 z m 0.82021,3.33375 q -1.0848,0 -2.05052,-0.41672 -0.96573,-0.41672 -1.68672,-1.13771 -0.72099,-0.72099 -1.13771,-1.68672 -0.41672,-0.96573 -0.41672,-2.05052 0,-1.09802 0.41672,-2.06375 0.41672,-0.96573 1.13771,-1.6801 0.72099,-0.71438 1.68672,-1.1311 0.96572,-0.41672 2.05052,-0.41672 1.09802,0 2.06375,0.41672 0.96573,0.41672 1.6801,1.1311 0.71438,0.71437 1.13109,1.6801 0.41672,0.96573 0.41672,2.06375 0,1.08479 -0.41672,2.05052 -0.41671,0.96573 -1.13109,1.68672 -0.71437,0.72099 -1.6801,1.13771 -0.96573,0.41672 -2.06375,0.41672 z m 0,-0.79375 q 1.87854,0 3.18823,-1.31631 1.30968,-1.3163 1.30968,-3.18161 0,-1.87854 -1.30968,-3.18823 -1.30969,-1.30969 -3.18823,-1.30969 -1.86532,0 -3.18162,1.30969 -1.3163,1.30969 -1.3163,3.18823 0,1.86531 1.3163,3.18161 1.3163,1.31631 3.18162,1.31631 z m 0,-4.49792 z"
+       id="path19244"
+       style="stroke-width:0.0132292;fill:#ffffff" />
+  </g>
+</svg>

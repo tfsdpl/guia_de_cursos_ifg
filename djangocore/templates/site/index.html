@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Cursos</title>
+    <link rel="icon" href="icones/ifg.svg" type="image/x-icon">
+
+    <!--Botstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--CSS Personalizado-->
+    <link href="{% static 'site/css/styles.css' %}" rel="stylesheet">
+
+    <!--ScriptBotstrap-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--Paralaxx.js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <!--Fonte OpenSans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="#" class="navbar-brand" style="font-size: 25px;">
+                    <img id="logo" src="icones/guia-ifg.svg" alt=""><div id="guia-top">Guia de Cursos <strong>IFG</strong></div>
+                </a>
+                <!--Para Mobile-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-links">
+                    <div class="navbar-nav ms-auto" >
+                        <div class="nav-item dropdown">
+                            <a class="nav-item navbar-link" href="#" id="busque-curso-menu">
+                                Busque Seu Curso 
+                                <svg class="busque-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" a>
+                                <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="busque-curso-menu">
+                                <a id="menu-por-modalidade" class="dropdown-item" href="#">Por Modalidade</a>
+                                <a id="menu-por-campus" class="dropdown-item" href="#">Por Câmpus</a>
+                            </div>
+                        </div>
+                        <a class="nav-item navbar-link" href="#" id="sobre-menu">Sobre</a>
+                        <a class="nav-item navbar-link" href="#" id="contato-menu">Contato</a>
+                        <div class="nav-item navbar-link" id="pesquisar-container">
+                            <a href="#" id="pesquisar-menu">
+                                <svg class="pesquisar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M11.742 10.344a5.5 5.5 0 1 0-1.397 1.397l4.309 4.308a1 1 0 0 0 1.414-1.414l-4.308-4.309zM12.5 5.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0z"></path>
+                                </svg>
+                                <span class="pesquisar-text">Pesquisar</span>
+                            <div id="cnt-pesq"><input type="text" id="pesquisar-input"></div>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Slider-->
+        <div class="container-fluid">
+            <div id="main-slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#main-slider" data-slide-to="1"></li>
+                    <li data-target="#main-slider" data-slide-to="2"></li>
+                    <li data-target="#main-slider" data-slide-to="3"></li>
+                    <li data-target="#main-slider" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="overlay">
+                            
+                            <img src="{% static 'site/img/_MG_8212-2.jpg' %}" class="d-block w-100" alt="">
+
+                            <div class="carousel-caption">
+                                Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
+                                desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
+                                de editais no menu estude no IFG. Nesse menu, é possível acompanhar as seleções que já ocorreram e as que estão com inscrições abertas/em 
+                                andamento, conforme as modalidades de cursos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay">
+                            <img src="{% static 'site/img/_MG_0396.jpg' %}" class="d-block w-100" alt="">
+                            <div class="carousel-caption">
+                                Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
+                                desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
+                                de editais no menu estude no IFG. Nesse menu, é possível acompanhar as seleções que já ocorreram e as que estão com inscrições abertas/em 
+                                andamento, conforme as modalidades de cursos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay">
+                            
+                            <img src="{% static 'site/img/_MG_1969.jpg' %}" class="d-block w-100" alt="">
+                            
+                            
+                            <div class="carousel-caption">
+                                Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
+                                desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
+                                de editais no menu estude no IFG. Nesse menu, é possível acompanhar as seleções que já ocorreram e as que estão com inscrições abertas/em 
+                                andamento, conforme as modalidades de cursos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay">
+                            <img src="img/_MG_4235.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption">
+                                Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
+                                desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
+                                de editais no menu estude no IFG. Nesse menu, é possível acompanhar as seleções que já ocorreram e as que estão com inscrições abertas/em 
+                                andamento, conforme as modalidades de cursos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay">
+                            <img src="img/ifg inhumas jif.jpeg" class="d-block w-100" alt="">
+                            <div class="carousel-caption">
+                                Este Guia de Cursos foi desenvolvido para te ajudar a conhecer as modalidades e cada um dos cursos regulares ofertados pelo IFG, que vão 
+                                desde o ensino médio até a pós-graduação. Para cursá-los, é preciso participar de processos seletivos, que são abertos com a publicação 
+                                de editais no menu estude no IFG. Nesse menu, é possível acompanhar as seleções que já ocorreram e as que estão com inscrições abertas/em 
+                                andamento, conforme as modalidades de cursos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--clique para o final-->
+        <div class="container-fluid">
+            <div  id="go-fim">
+            <a id="fim" href="#"><svg class="fim-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" a><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/> </svg></a>
+            </div>
+        </div>
+        <!--busque seu curso-->
+        <div class="container-fluid">
+            <div id="busque-seu-curso">
+                BUSQUE SEU CURSO
+                <div id="bsc-div">
+                    <ol id="bsc-lista">
+                        <li class="bsc" id="bsc1">Por Modalidade</li>
+                        <li class="bsc" id="bsc2">Por Câmpus</li>
+                        <li class="bsc" id="bsc3">Estude no IFG</li>
+                    </ol></div>
+                </div>
+            </div>
+        </div>
+    <!--modalidades-->
+        <div class="container-fluid">
+            <div id="modalidades">
+                MODALIDADES
+            </div>
+            <div id="modalidade-slide" class="carousel slide modalidade-carousel" data-bs-ride="false">
+                <div class="carousel-inner modalidade-carousel-inner">
+                    <div class="carousel-item active modalidade-carousel-item">
+                        <div class="row modalidade-row">
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="{% static 'site/icones/superior.svg' %}" style="width: 100px; height: auto;" alt="Imagem 1"></li>
+                                        
+                                        <li>Superior</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/ead.svg" style="width: auto; height: 100px; object-fit: contain;" alt="Imagem 2"></li>
+                                        <li>EAD</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/eja.svg" style="width: 100px; height: auto;" alt="Imagem 3"></li>
+                                        <li>EJA</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/extensao.svg" style="width: 100px; height: auto;" alt="Imagem 4"></li>
+                                        <li>Extensão</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item modalidade-carousel-item">
+                        <div class="row modalidade-row">
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/medio.svg" style="width: 100px; height: auto;" alt="Imagem 5"></li>
+                                        <li>Ensino Médio</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/pos.svg" style="width: auto; height: 110px; object-fit: contain;" alt="Imagem 6"></li>
+                                        <li>Pós-Graduação</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-2 modalidade-col">
+                                <div class="modalidade-back">
+                                    <ol class="lista-mod">
+                                        <li class="pad-mod"><img src="icones/tecnico.svg" style="width: auto; height: 100px; object-fit: contain;" alt="Imagem 7"></li>
+                                        <li>Técnico</li>
+                                        <li style="color: #d64b4f">(pós médio)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles -->
+                <a class="carousel-control-prev modalidade-control-prev" href="#modalidade-slide" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon modalidade-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next modalidade-control-next" href="#modalidade-slide" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon modalidade-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+    <!--campus-->
+    <div class="container-fluid">
+        <div id="campus">
+            <h2>CÂMPUS</h2>
+            <div id="campus-row" class="cantainer d-flex row">
+                
+                
+                <!-- Bloco 1 -->
+                <div id="campus-div" class="col-12 col-md-6 col-lg-3 mb-3 order-2 order-lg-1">
+                    
+                     {% if all_natops%}
+                    {% for natop in all_natops %}
+                        <ol id="">
+                            <a class="link-campus" href="campus/aguas-lindas.html"><li class="campus-li" id="aguaslindas-item">{{ natop.nome_campus }}</li></a>
+                        </ol>
+                       
+                    {% endfor %}
+                    {%else%}
+              {%endif%}
+                    
+                </div>
+                <!-- Bloco 2 -->
+                
+                <!-- Bloco 4 (Mapa) - Colocado como primeiro no HTML, mas com ordem alterada para desktop -->
+                <div id="campus-div-mapa" class="col-12 col-md-6 col-lg-3 mb-3 order-1 order-lg-4">
+                    <div class="map-container">
+                        <img src="{% static 'icones/mapa.svg' %}" class="img-fluid" id="mapa" alt="Mapa">
+                        <div class="pointer" style="top: 68%; left: 20%;">
+                            <img class="point-img" id="jatai" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-jatai">Jataí</div>
+                        </div> 
+                        <div class="pointer" style="top: 76%; left: 56%;">
+                            <img class="point-img" id="itumbiara" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-itumbiara">Itumbiara</div>
+                        </div> 
+                        <div class="pointer" style="top: 40%; left: 45%;">
+                            <img class="point-img" id="cidadegoias" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-cidadegoias">Cidade de Goiás</div>
+                        </div> 
+                        <div class="pointer" style="top: 65%; left: 59%;">
+                            <img class="point-img" id="aparecida" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-aparecida">Aparecida de Goiás</div>
+                        </div> 
+                        <div class="pointer" style="top: 60%; left: 59%;">
+                            <img class="point-img" id="goiania" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-goiania">Goiânia</div>
+                        </div>
+                        <div class="pointer" style="top: 62%; left: 55%;">
+                            <img class="point-img" id="goianiaoeste" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-goianiaoeste">Goiânia Oeste</div>
+                        </div>
+                        <div class="pointer" style="top: 55%; left: 55%;">
+                            <img class="point-img" id="inhumas" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-inhumas">Inhumas</div>
+                        </div>
+                        <div class="pointer" style="top: 55%; left: 63%;">
+                            <img class="point-img" id="anapolis" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-anapolis">Anápolis</div>
+                        </div>
+                        <div class="pointer" style="top: 61%; left: 64%;">
+                            <img class="point-img" id="canedo" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-canedo">Senador Canedo</div>
+                        </div> 
+                        <div class="pointer" style="top: 22%; left: 60%;">
+                            <img class="point-img" id="uruaçu" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-uruaçu">Uruaçu</div>
+                        </div> 
+                        <div class="pointer" style="top: 38%; left: 71%;">
+                            <img class="point-img" id="aguaslindas" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-aguaslindas">Águas Lindas</div>
+                        </div>
+                        <div class="pointer" style="top: 42%; left: 75%;">
+                            <img class="point-img" id="valparaiso" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-valparaiso">Valparaíso</div>
+                        </div>
+                        <div class="pointer" style="top: 48%; left: 76%;">
+                            <img class="point-img" id="luziania" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-luziania">Luziânia</div>
+                        </div>
+                        <div class="pointer" style="top: 34%; left: 79%;">
+                            <img class="point-img" id="formosa" src="icones/pointer-green.svg" alt="Pointer">
+                            <div class="leg" id="leg-formosa">Formosa</div>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sobre o IFG-->
+    <div class="container-fluid">
+        <div id="sobre-ifg" class="text-center mb-4">
+            <h2>SOBRE O IFG</h2>
+        </div>
+        <div id="sobre-baixo" class="row justify-content-center">
+            <div id="quadro-video" class="col-12 col-md-6 mb-4">
+                <div class="video-container">
+                    <iframe id="link-video" class="embed-responsive-item" src="https://www.youtube.com/embed/n-8eTXjqf7o" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="quadro-sobre" class="col-12 col-md-6 mb-4">
+                <div class="p-5">
+                    O Instituto Federal de Educação,
+                    Ciência e Tecnologia de Goiás (IFG)
+                    é uma instituição de educação
+                    superior, básica e profissional,
+                    pluricurricular e multicâmpus,
+                    especializada na oferta de
+                    educação profissional, tecnológica e
+                    gratuita em diferentes modalidades
+                    de ensino. O IFG tem por finalidade
+                    formar e qualificar profissionais
+                    para os diversos setores da
+                    economia, bem como realizar
+                    pesquisas e promover o
+                    desenvolvimento tecnológico de
+                    novos processos, produtos e
+                    serviços, em estreita articulação
+                    com os setores produtivos e com a
+                    sociedade, oferecendo mecanismos
+                    para a educação continuada.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--links úteis-->
+    <div class="container-fluid">
+        <div id="links-uteis" class="text-center mb-4">
+            <h2>LINKS ÚTEIS</h2>
+        </div>
+        <div id="container-links-uteis" class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <ol class="lista-links-uteis">
+                    <li>
+                        <div class="p-2" style="position: relative;">
+                            <img src="img/_MG_8212-2.jpg" id="img-circ" class="img-links-uteis" alt="Imagem 1">
+                        </div>
+                        <div class="p-2">
+                            <img src="icones/play-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+                        </div>
+                    </li>
+                    <li class="texto-links-uteis">
+                        TUTORIAIS<br> NO YOUTUBE
+                    </li>
+                </ol>
+                <ol class="lista-links-uteis">
+                    <li>
+                        <div class="p-2">
+                            <img src="img/_MG_0396.jpg" class="img-links-uteis" alt="Imagem 2">
+                        </div>
+                        <div class="p-2">
+                            <img src="icones/capelo-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+                        </div>
+                    </li>
+                    <li class="texto-links-uteis">
+                        ESTUDE NO IFG<br> <div style="color: white;">.</div>
+                    </li>
+                </ol>
+                <ol class="lista-links-uteis">
+                    <li>
+                        <div class="p-2">
+                            <img src="img/360_F_227729582_tbDocS9RLEiTkzpwOdPf1qKXiW4MQC89.jpeg" class="img-links-uteis" alt="Imagem 3">
+                        </div>
+                        <div class="p-2">
+                            <img src="icones/pergunta-branco.svg" class="img-fluid icones-links-uteis" alt="Ícone">
+                        </div>
+                    </li>
+                    <li class="texto-links-uteis">
+                        PERGUNTAS<br> FREQUENTES
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!--Contato-->
+    <div class="container-fluid">
+        <div id="contato">
+            <div id="contato-map" class="row justify-content-center">
+                <div id="contato-esquerda" class="col-12 col-md-6 mb-4">
+                    <iframe id="localizacao" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1653.809730644033!2d-49.280834059562046!3d-16.70354588520161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1500a9e5511%3A0xe678f663c6ccdb1d!2sInstituto%20Federal%20de%20Goi%C3%A1s%20-%20Reitoria!5e0!3m2!1spt-BR!2sbr!4v1724850844896!5m2!1spt-BR!2sbr" 
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div id="contato-direita" class="col-12 col-md-6 mb-4">
+                    <div class="p-5">
+                        Contato<br>
+                        <span class="contato-cor"><Strong>FALE CONOSCO</Strong></span><br>
+                        ...<br>
+                        ...<br>
+                        <div id="contato-div1" class="contato-div">Diretório<br><span class="contato-cor"><strong>TODOS OS CONTATOS</strong></span></div>
+                        <div id="contato-fone" class="contato-div">
+                            <div><img src="icones/fone-verde.svg"></div>
+                            <div>Reitoria IFG<br><strong>(062) 0000-0000</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Whats-->
+    <div class="container-fluid">
+        <div class="container whats-container">
+            <div id="whats-top" class="">
+                Quer ficar por dentro dos nossos processos seletivos e editais?<br>
+                Inscreva-se na Lista de Trasmissão do Guia de Cursos IFG
+                <div id="whats-bot" class="d-flex justify-content-between align-items-center">
+                    <div class="text-center w-100">Cadastre seu whatsapp aqui</div>
+                    <div class=""><img src="icones/ok.svg"></div>
+                </div>
+            </div>
+            <!--voltar inicio-->
+            <div id="whats-voltar" class="">
+                <a id="inicio" href="#"><svg class="fim-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" a><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/></svg>
+                <br>Voltar ao Topo
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--rodape-->
+    <div class="container-fluid">
+        <div id="rodape">
+            <div id="rodape-cima">
+                <div><img src="icones/guia-ifg.svg"></div>
+                <div id="rodape-texto1">Guia de Cursos <strong>IFG</strong></div>
+            </div>
+            <div id="rodape-baixo">
+                <div><a href="http://www.ifg.edu.br/"><img id="rodape-logo" src="icones/ifg.svg"></a></div>
+                <div id="rodape-texto2"><strong>INSTITUTO FEDERAL</strong><br>Goiás</div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <div id="final-da-pagina"></div>
+     <script src="{% static 'site/js/scripts.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
